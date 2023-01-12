@@ -1,0 +1,16 @@
+.item {
+    flex-grow: 1;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    padding: 0px 16px;
+
+    &:hover {
+        cursor: pointer;
+        color: var(--colors-primary);
+    }
+}

@@ -1,0 +1,148 @@
+.root {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 64px;
+    column-gap: 16px;
+    row-gap: 24px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    row-gap: 2rem;
+}
+
+.logo {
+    height: 60px;
+}
+
+.footer_title {
+    font-size: 24px !important;
+    line-height: 1;
+}
+
+.social_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 16px;
+
+}
+
+.social {
+    all: unset;
+    background: transparent;
+    fill: var(--colors-on-background);
+    border: 1px solid var(--colors-on-background);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: all 250ms linear;
+
+    &:hover{
+        border: 1px solid var(--colors-primary);
+    }
+}
+
+.footer_section_title {
+    font-family: var(--fonts-heading) !important;
+    font-size: 18px !important;
+    font-weight: 500;
+}
+
+.copyright_area {
+    width: 100%;
+    border-top: 1px solid var(--colors-divider-on-background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        padding: 16px;
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 4;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.copyright_links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.copyright_link {
+    font-family: var(--font-heading);
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .root {
+        width: 100%;
+        min-height: 40vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--colors-background);
+    
+        color: var(--colors-on-background);
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 32px;
+        //padding: 12px;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0rem;
+        gap: .75rem;
+    }
+
+    .copyright_area {
+        width: 100%;
+        padding: 24px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .copyright_link {
+        font-size: 14px;
+        opacity: .75;
+    }
+}

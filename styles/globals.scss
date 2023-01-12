@@ -1,0 +1,66 @@
+@import "../assets/fonts/visby/style.scss";
+
+:root {
+  --colors-background: #fff;
+  --colors-surface: #fafafa;
+  --colors-on-background: #181818;
+  --colors-on-surface: #111111;
+
+  --colors-divider-on-background: #f9f9f940;
+
+  --colors-primary: #7d64fc;
+  --colors-on-primary: #fafafa;
+
+  --fonts-heading: "Visby Bold", sans-serif;
+  --fonts-body: "Visby Regular", sans-serif;
+
+  --size-min-appbar-height: 96px;
+
+  --easing-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --heading-bottom-card-transform: 128px;
+
+  --mobile-page-padding: 12px;
+  --section-spacing: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: transparent;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--colors-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fonts-heading);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app {
+  width: 100%;
+  min-height: 100%;
+  color: var(--colors-on-background);
+  font-family: var(--fonts-body);
+}
