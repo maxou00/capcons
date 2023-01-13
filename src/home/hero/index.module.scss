@@ -1,0 +1,78 @@
+.hero {
+    padding-top: var(--appbar-height);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+}
+
+.side_text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.hero__title {
+    max-width: 14ch;
+
+    span {
+        color: var(--colors-primary);
+    }
+}
+
+.hero__subtitle {
+    width: 36ch;
+}
+
+.ctas {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    .stores {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+
+    }
+}
+
+.cta_signup {
+    width: 100%;
+    align-items: center;
+}
+
+
+.cta_store {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 56px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--colors-on-surface);
+}
+
+.cta_store_apple {
+    @extend .cta_store;
+}
+
+.cta_store_play {
+    @extend .cta_store;
+}

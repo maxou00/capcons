@@ -1,24 +1,15 @@
-import { Container, IconButton } from "@mui/material";
+import { Container, IconButton, useTheme } from "@mui/material";
+import { grey } from "@mui/material/colors";
 import Link from "next/link";
-import { Envelope, List, MapPin, Person, Phone, ShoppingCart, User, X } from "phosphor-react";
-import { useMemo, useState } from "react";
-import { FaLinkedin, FaSlack, FaTwitter, FaYoutube } from "react-icons/fa";
-import { useInView } from "react-intersection-observer";
+import { ShoppingCart, User } from "phosphor-react";
+import { useEffect, useState } from "react";
 import { useNavbarScrollAnimation } from "../../../hooks/useNavbarScrollAnimation";
 import { useNodeRect } from "../../../hooks/useNodeRect";
 import Logo from "../../Logo";
-import NavigationDrawer from "../drawer";
 import NavItem from "../NavItem";
-import NavItemSurface from "../NavItem/surface";
 import styles from "./index.module.scss";
 
 function DesktopMenu(props: { parent: HTMLDivElement | undefined }) {
-  const services = [
-    "React.js Development",
-    "Digital Marketing",
-    "UI/UX Design",
-  ];
-
   return (
     <div data-variant="desktop" className={styles.menu}>
       <Link href="/about">
@@ -45,17 +36,25 @@ function DesktopMenu(props: { parent: HTMLDivElement | undefined }) {
 export function Appbar() {
   const [parentRef, setParentRef] = useState<HTMLDivElement | null>();
   const [drawerOpen, setDrawerOpen] = useState(false);
-
+  const theme = useTheme();
   const { trackingRef, inView, shouldFix, lastScrollPercent } =
     useNavbarScrollAnimation();
 
   const appbar = useNodeRect();
 
   /**
-   * The states that handle Login Button or User icon Button appearance. 
+   * The states that handle Login Button or User icon Button appearance.
    * Replace with your own state, selector, or any other custom logic
    */
   const [isConnected, setIsConnected] = useState(false);
+
+  useEffect(() => {
+    if (appbar.client) {
+      let root = document.querySelector(":root") as HTMLHtmlElement;
+      root.style.setProperty("--appbar-height", appbar.client.height+"px");
+      root.style.setProperty("--appbar-width", appbar.client.width+"px");
+    }
+  }, [appbar.client]);
 
   return (
     <div className={styles.appbar__wrapper}>
@@ -76,13 +75,18 @@ export function Appbar() {
           <Logo variant="dark" className={styles.logo} />
           <DesktopMenu parent={parentRef ?? undefined} />
           <div className={styles.side_actions}>
-            <IconButton sx={{
-              border: "1px solid red",
-            }}>
-              <User weight="fill"/>
+            <IconButton
+              sx={{
+                border: `1px solid ${theme.palette.primary.main}`,
+              }}
+            >
+              <User weight="fill" color={theme.palette.primary.main} />
             </IconButton>
             <IconButton>
-              <ShoppingCart/>
+              <ShoppingCart
+                weight="fill"
+                color={isConnected ? grey[900] : grey[500]}
+              />
             </IconButton>
           </div>
         </Container>

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import HomeHero from "../src/home/hero";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
+        <HomeHero/>
       </main>
     </>
   );

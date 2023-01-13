@@ -3,7 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .appbar__tracker {
@@ -23,7 +27,6 @@
     left: 0;
 
     .content {
-        padding: 0px var(--size-container-padding);
         display: flex;
         flex-direction: row;
         align-items: center;
