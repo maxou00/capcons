@@ -1,0 +1,139 @@
+.base {
+    width: 100%;
+    padding: 80px var(--page-padding-x);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #f0a444;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 76px;
+    z-index: 2;
+    color: var(--text-color);
+}
+
+.topbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.arrow_btn {
+    all: unset;
+    background-color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &[data-disabled="true"] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.arrow_prev {
+    @extend .arrow_btn;
+}
+
+.arrow_next {
+    @extend .arrow_btn;
+}
+
+.users {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    min-height: 40px;
+}
+
+.card_wrapper {
+    background-color: transparent;
+}
+
+.card {
+    width: 560px;
+    margin: 44px 12px;
+    background-color: white;
+    padding: 80px 50px 40px 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    position: relative;
+}
+
+.quote_symbol {
+    height: 44px;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 44px;
+    transform: translateY(-50%);
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.user__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.user__name {
+    font-weight: 400 !important;
+}
+.subtitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__content {
+        width: 100%;
+    }
+
+    &__cta {
+        display: inline-block;
+        color: #2b90ef;
+        cursor: pointer;
+    }
+}
