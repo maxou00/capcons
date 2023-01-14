@@ -3,8 +3,8 @@
 :root {
   --colors-background: #fff;
   --colors-surface: #fafafa;
-  --colors-on-background: #181818;
-  --colors-on-surface: #111111;
+  --colors-on-background: #2B283D;
+  --colors-on-surface: #2B283D;
 
   --colors-divider-on-background: #f9f9f940;
 
@@ -42,6 +42,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   background-color: var(--colors-background);
+  color: var(--colors-on-background);
 }
 
 h1,
