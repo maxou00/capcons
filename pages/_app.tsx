@@ -6,6 +6,10 @@ import { Footer } from "../src/components/Footer";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@mui/system";
 import appTheme from "../src/theme";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
