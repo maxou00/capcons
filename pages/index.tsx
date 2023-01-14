@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Features from "../src/home/features";
 import HomeHero from "../src/home/hero";
+import MakeTheMostOfYourStories from "../src/home/make-the-most-of-your-stories";
 import OurUsers from "../src/home/our-users";
 import CapConUsageQuote from "../src/home/quote";
 import styles from "../styles/Home.module.scss";
@@ -21,7 +22,8 @@ export default function Home() {
         <HomeHero />
         <Features />
         <CapConUsageQuote />
-        <OurUsers/>
+        <OurUsers />
+        <MakeTheMostOfYourStories />
       </main>
     </>
   );

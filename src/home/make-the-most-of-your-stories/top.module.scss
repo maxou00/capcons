@@ -1,0 +1,29 @@
+.base{
+    width: 100%;
+    position: relative;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .section_text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 24px;
+        padding-right: 120px;
+    }
+    
+    .section_img {
+        background: no-repeat center/cover url("../../../assets/img/girl_speaking.png");
+        width: 50%;
+        height: 580px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
