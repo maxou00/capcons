@@ -24,7 +24,7 @@ export function SectionTop() {
         }}
       >
         <div
-          ref={(el) => (sectionText.ref.current = el as any)}
+          ref={(el) => (sectionImg.ref.current = el as any)}
           className={styles.section_img}
         ></div>
         <div

@@ -1,0 +1,23 @@
+.base {
+    width: 100%;
+    background: no-repeat center/cover
+        url("https://unsplash.com/photos/F2KRf_QfCqw/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8ZXZlbnR8ZW58MHx8fHwxNjczNzI0NDI0&force=true&w=1920");
+}
+
+.content {
+    background: #2b283dde;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+        font-family: 'Visby Light';
+        font-size: 150px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        mix-blend-mode: screen;
+    }
+}

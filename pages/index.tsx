@@ -4,6 +4,7 @@ import HomeHero from "../src/home/hero";
 import MakeTheMostOfYourStories from "../src/home/make-the-most-of-your-stories";
 import OurUsers from "../src/home/our-users";
 import CapConUsageQuote from "../src/home/quote";
+import UpcomingEvent from "../src/home/upcoming-events";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
         <CapConUsageQuote />
         <OurUsers />
         <MakeTheMostOfYourStories />
+        <UpcomingEvent />
       </main>
     </>
   );
