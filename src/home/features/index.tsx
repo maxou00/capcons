@@ -12,10 +12,11 @@ import analyticIcon from "../../../assets/icons/Bars.svg";
 
 import styles from "./index.module.scss";
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import gsap from "gsap";
 import { randomInRange } from "../../utils/random";
 import { clamp } from "../../utils/clamp";
+import { Moon, Sun } from "phosphor-react";
 
 const features = [
   {
@@ -69,68 +70,54 @@ const features = [
 ];
 
 export default function Features() {
-  const [root, setRoot] = useState<HTMLDivElement>();
-  const [ring1, setRing1] = useState<HTMLDivElement>();
-  const [ring2, setRing2] = useState<HTMLDivElement>();
-  const [ring3, setRing3] = useState<HTMLDivElement>();
+  const [mode, setMode] = useState("light");
 
-  /*useEffect(() => {
-    if (root && ring1 && ring2 && ring3) {
-      const interval = setInterval(() => {
-        let rootRect = root.getBoundingClientRect();
-        let rings = [ring1, ring2, ring3];
-        let rects = rings.map((r) => r.getBoundingClientRect());
-        let positions = rings.map((r) => [
-          randomInRange(-20, 20),
-          randomInRange(-20, 20),
-        ]);
+  const switchMode = useCallback(() => {
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
+  }, []);
 
-        let timeline = gsap.timeline();
-
-        rings.forEach((r, i) => {
-          let position = {
-            x: clamp(rootRect.x + (rects[i].width * positions[i][0]), rootRect.x, rootRect.x + rootRect.width),
-            y: clamp(rootRect.y + (rects[i].height * positions[i][1]), rootRect.y, rootRect.y + rootRect.height)
-          };
-          timeline.fromTo(
-            r,
-            { x: 0, y: 0 },
-            { x: position.x, y: position.y, duration: 2 }
-          )
-          .set(r, { x: position.x, y: position.y });
-        });
-
-        timeline.progress(1).progress(0);
-      }, 12500);
-      return () => clearInterval(interval);
+  const style = useMemo(() => {
+    if(mode === "dark") {
+        return {
+            '--text-color': '#f9f9f9',
+            '--card-surface': '#03071e',
+            '--card-icon-bg': '#2b2d42',
+            '--switch-bg': '#03071e',
+            '--bg-color': '#2b2d42'
+        }
     }
-  }, [root, ring1, ring2, ring3]);
-  */
+
+    return {
+        '--text-color': '#181818',
+        '--card-surface': '#2B283D10',
+        '--card-icon-bg': '#fff',
+        '--switch-bg': '#2b283d',
+        '--bg-color': '#F0A44425'
+    }
+  }, [mode]);
 
   return (
-    <div ref={(el) => setRoot(el as any)} className={styles.base}>
-      <div
-        ref={(el) => setRing1(el as any)}
-        className={classNames(styles.ring, styles.ring1)}
-      >
+    <div style={style as any} className={styles.base}>
+      <div className={classNames(styles.ring, styles.ring1)}>
         <div className={styles.inner}></div>
       </div>
-      <div
-        ref={(el) => setRing2(el as any)}
-        className={classNames(styles.ring, styles.ring2)}
-      >
+      <div className={classNames(styles.ring, styles.ring2)}>
         <div className={styles.inner}></div>
       </div>
-      <div
-        ref={(el) => setRing3(el as any)}
-        className={classNames(styles.ring, styles.ring3)}
-      >
+      <div className={classNames(styles.ring, styles.ring3)}>
         <div className={styles.inner}></div>
       </div>
 
       <Container maxWidth="xl" className={styles.content}>
         <div className={styles.topbar}>
           <Text variant="heading">Features</Text>
+          <button className={styles.theme_switch} onClick={switchMode}>
+            {mode === "light" ? (
+              <Moon weight="fill" size={24} />
+            ) : (
+              <Sun weight="fill" size={24} />
+            )}
+          </button>
         </div>
         <div className={styles.features}>
           {features.map((f, i) => {

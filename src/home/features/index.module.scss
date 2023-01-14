@@ -5,8 +5,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: #F0A44425;
+    background-color: var(--bg-color);
     position: relative;
+
+    * {
+        transition: all 250ms linear;
+    }
 }
 
 .content {
@@ -16,6 +20,7 @@
     justify-content: center;
     gap: 60px;
     z-index: 2;
+    color: var(--text-color);
 }
 
 .topbar {
@@ -24,6 +29,24 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.theme_switch {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    color: white;
+    background: var(--switch-bg);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.12);
+
+    border-radius: 100%;
+
 }
 
 .features {
@@ -35,7 +58,7 @@
 }
 
 .feature {
-    background-color: #2B283D10;
+    background-color: var(--card-surface);
     padding: 24px;
     padding-top: 48px;
     padding-bottom: 40px;
@@ -47,7 +70,7 @@
 }
 
 .img_wrapper {
-    background: white;
+    background: var(--card-icon-bg);
     border-radius: 100%;
     padding: 16px;
     width: 64px;
@@ -83,11 +106,10 @@
 
     &__cta {
         display: inline-block;
-        color: #2B90EF;
+        color: #2b90ef;
         cursor: pointer;
     }
 }
-
 
 .ring {
     width: 240px;
@@ -96,9 +118,9 @@
     padding: 8px;
     position: absolute;
     z-index: 1;
-    border: 8px solid #F0A44420;
+    border: 8px solid #f0a44420;
 
-    .inner{
+    .inner {
         width: 100%;
         height: 100%;
         border-radius: 100%;
@@ -106,10 +128,10 @@
     }
 }
 
-.ring1{
-    top: 16.80%;
-    right: 16.80%;
-
+.ring1 {
+    top: 16.8%;
+    right: 16.8%;
+    animation: anim-ring-1 3s ease-in-out 0s infinite alternate;
 }
 
 .ring2 {
@@ -117,6 +139,7 @@
     height: 128px;
     top: 55.73%;
     left: 47.36%;
+    animation: anim-ring-2 3s ease-in-out 0s infinite alternate;
 }
 
 .ring3 {
@@ -124,11 +147,35 @@
     height: 128px;
     top: 62.32%;
     left: 84.16%;
+    animation: anim-ring-3 3s ease-in-out 0s infinite alternate;
 }
-
 
 @keyframes anim-ring-1 {
     0% {
-        transform: translate();
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(20%);
+    }
+}
+
+@keyframes anim-ring-2 {
+    0% {
+        transform: translate(-20%, -20%);
+    }
+
+    100% {
+        transform: translate(20%, 20%);
+    }
+}
+
+@keyframes anim-ring-3 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
