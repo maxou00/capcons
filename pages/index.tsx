@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Features from "../src/home/features";
 import HomeHero from "../src/home/hero";
+import CapConUsageQuote from "../src/home/quote";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <main className={styles.main}>
         <HomeHero />
         <Features />
+        <CapConUsageQuote />
       </main>
     </>
   );

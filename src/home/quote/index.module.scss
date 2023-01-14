@@ -1,0 +1,23 @@
+.base{
+    width: 100%;
+    padding-top: 196px;
+    padding-bottom: 100px;
+}
+
+.content {
+    background: no-repeat 0% 0%/cover fixed url(https://unsplash.com/photos/oe_03B2Q5A4/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MjJ8fG5hdHVyZSUyMGpveXxlbnwwfHx8fDE2NzM3MTA4MDk&force=true&w=1920);
+    mix-blend-mode: multiply;
+    position: relative;
+}
+
+
+.inner_layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #7D64FCaa;
+    color: #f9f9f9;
+    width: 100%;
+    padding: 124px var(--page-padding-x);
+    text-align: center;
+}
