@@ -1,0 +1,134 @@
+.base {
+    width: 100%;
+    padding: 80px var(--page-padding-x);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #F0A44425;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    z-index: 2;
+}
+
+.topbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    min-height: 40px;
+}
+
+.feature {
+    background-color: #2B283D10;
+    padding: 24px;
+    padding-top: 48px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.img_wrapper {
+    background: white;
+    border-radius: 100%;
+    padding: 16px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.img {
+    width: 36px;
+    height: auto;
+    object-fit: contain;
+}
+
+.title {
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__content {
+        width: 100%;
+    }
+
+    &__cta {
+        display: inline-block;
+        color: #2B90EF;
+        cursor: pointer;
+    }
+}
+
+
+.ring {
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    border: 8px solid #F0A44420;
+
+    .inner{
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background-color: transparent;
+    }
+}
+
+.ring1{
+    top: 16.80%;
+    right: 16.80%;
+
+}
+
+.ring2 {
+    width: 128px;
+    height: 128px;
+    top: 55.73%;
+    left: 47.36%;
+}
+
+.ring3 {
+    width: 128px;
+    height: 128px;
+    top: 62.32%;
+    left: 84.16%;
+}
+
+
+@keyframes anim-ring-1 {
+    0% {
+        transform: translate();
+    }
+}

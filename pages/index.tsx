@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Features from "../src/home/features";
 import HomeHero from "../src/home/hero";
 import styles from "../styles/Home.module.scss";
 
@@ -15,7 +16,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <HomeHero/>
+        <HomeHero />
+        <Features />
       </main>
     </>
   );
