@@ -39,7 +39,7 @@ export default function OurTeam() {
           <Text variant="heading">Our team</Text>
           <Text variant="body">
             It takes an energetic group of passionate operators to create a
-            purpose for our usersI
+            purpose for our users
           </Text>
         </div>
         <div className={styles.members}>

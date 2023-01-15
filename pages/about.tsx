@@ -1,8 +1,10 @@
 import Head from "next/head";
+import { Container } from "@mui/material";
 import AboutHero from "../src/about/hero";
 import OurGoals from "../src/about/our-goals";
 import OurTeam from "../src/about/our-team";
 import WhoAreWe from "../src/about/who-are-we";
+import JoinUs from "../src/ctas/join-us";
 import styles from "../styles/About.module.scss";
 
 export default function Home() {
@@ -22,6 +24,11 @@ export default function Home() {
         <WhoAreWe />
         <OurGoals />
         <OurTeam />
+        <div className={styles.join_us}>
+          <Container>
+            <JoinUs />
+          </Container>
+        </div>
       </main>
     </>
   );
