@@ -21,6 +21,7 @@
     }
 
     &[data-text-variant="feature"] {
+        font-family: 'Visby Medium';
         font-size: 32px;
         font-weight: 600;
         line-height: 51px;
@@ -36,6 +37,7 @@
     }
 
     &[data-text-variant="body"] {
+        font-family: 'Visby Medium';
         font-size: 20px;
         font-weight: 500;
         line-height: 31px;

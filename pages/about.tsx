@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutHero from "../src/about/hero";
+import WhoAreWe from "../src/about/who-are-we";
 import styles from "../styles/About.module.scss";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <AboutHero />
+        <WhoAreWe />
       </main>
     </>
   );
