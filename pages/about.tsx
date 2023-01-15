@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutHero from "../src/about/hero";
+import OurGoals from "../src/about/our-goals";
 import WhoAreWe from "../src/about/who-are-we";
 import styles from "../styles/About.module.scss";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <main className={styles.main}>
         <AboutHero />
         <WhoAreWe />
+        <OurGoals />
       </main>
     </>
   );
