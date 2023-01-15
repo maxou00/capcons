@@ -6,6 +6,7 @@ import OurTeam from "../src/about/our-team";
 import WhoAreWe from "../src/about/who-are-we";
 import JoinUs from "../src/ctas/join-us";
 import styles from "../styles/About.module.scss";
+import SubscribeToNewsletter from "../src/ctas/join-us/newsletter";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
             <JoinUs />
           </Container>
         </div>
+        <SubscribeToNewsletter />
       </main>
     </>
   );

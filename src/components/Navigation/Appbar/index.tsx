@@ -20,9 +20,11 @@ function DesktopMenu(props: { parent: HTMLDivElement | undefined }) {
       <NavItem className={styles.item} anchor={props.parent}>
         <span className={styles.title}>Features</span>
       </NavItem>
-      <NavItem className={styles.item} anchor={props.parent}>
-        <span className={styles.title}>About</span>
-      </NavItem>
+      <Link href="/about" passHref>
+        <NavItem className={styles.item} anchor={props.parent}>
+          <span className={styles.title}>About</span>
+        </NavItem>
+      </Link>
       <NavItem className={styles.item} anchor={props.parent}>
         <span className={styles.title}>Resources</span>
       </NavItem>
@@ -51,8 +53,8 @@ export function Appbar() {
   useEffect(() => {
     if (appbar.client) {
       let root = document.querySelector(":root") as HTMLHtmlElement;
-      root.style.setProperty("--appbar-height", appbar.client.height+"px");
-      root.style.setProperty("--appbar-width", appbar.client.width+"px");
+      root.style.setProperty("--appbar-height", appbar.client.height + "px");
+      root.style.setProperty("--appbar-width", appbar.client.width + "px");
     }
   }, [appbar.client]);
 

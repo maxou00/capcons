@@ -45,6 +45,7 @@
     }
 
     &[data-text-variant="body:bold"] {
+        font-family: 'Visby Medium';
         font-size: 20px;
         font-weight: 600;
         line-height: 31px;
@@ -59,6 +60,7 @@
     }
 
     &[data-text-variant="button"] {
+        font-family: 'Visby Medium';
         font-size: 16px;
         font-weight: 600;
         line-height: 25px;
