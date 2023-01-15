@@ -28,9 +28,11 @@ function DesktopMenu(props: { parent: HTMLDivElement | undefined }) {
       <NavItem className={styles.item} anchor={props.parent}>
         <span className={styles.title}>Resources</span>
       </NavItem>
-      <NavItem className={styles.item}>
-        <span className={styles.title}>Contact</span>
-      </NavItem>
+      <Link href="/contact-us" passHref>
+        <NavItem className={styles.item}>
+          <span className={styles.title}>Contact</span>
+        </NavItem>
+      </Link>
     </div>
   );
 }

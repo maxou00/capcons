@@ -1,0 +1,14 @@
+.main {
+    min-height: 100vh;
+    padding-top: calc(var(--appbar-height) + 100px);
+    padding-bottom: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60% auto;
+}
+
+.formBtn {
+    min-width: 196px;
+}
