@@ -1,0 +1,19 @@
+.base {
+    background: no-repeat center/cover fixed url('https://unsplash.com/photos/eF7HN40WbAQ/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8dGFsa2luZ3xlbnwwfHx8fDE2NzM3NjU1NjE&force=true&w=1920');
+}
+
+.inner {
+    min-height: 600px;
+    background: linear-gradient(95.85deg, #5340b1 0%, #5643b6 47.92%, #7d64fc 100%);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.text {
+    max-width: 90%;
+}
