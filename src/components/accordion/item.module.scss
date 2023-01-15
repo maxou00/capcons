@@ -1,0 +1,107 @@
+.AccordionItem {
+    --padding-x: 24px;
+    --padding-y: 18px;
+    --active-color: var(--colors-primary);
+
+    width: 100%;
+    border: 1px solid #ffffff00;
+    background: transparent;
+    border-radius: 12px;
+    transition: all 150ms linear;
+    border: 1px solid rgba(43, 40, 61, 0.2);
+
+    &:hover {
+        border: 1px solid var(--colors-primary);
+
+        .header {
+            color: var(--colors-primary);
+            opacity: 1;
+        }
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: var(--padding-y) var(--padding-x);
+        gap: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        transition: all 150ms linear;
+
+        &[data-open="true"] {
+            color: var(--active-color);
+        }
+    }
+
+    .headerLeft {
+        flex-grow: 1;
+        overflow: hidden;
+        text-align: left;
+
+        .title {
+            width: 100%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        &[data-open="true"] {
+            .title {
+                width: 100%;
+                text-overflow: unset;
+                overflow: unset;
+                white-space: unset;
+            }
+        }
+    }
+
+    .iconButton {
+        display: block;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        transform: rotate(0deg);
+        transition: all 150ms linear;
+
+        &[data-open="true"] {
+            transform: rotate(180deg);
+        }
+    }
+
+    .panel {
+        width: 100%;
+        overflow: hidden;
+        height: var(--panel-height);
+        transition: all var(--transition-duration) linear;
+
+        .content {
+            width: 100%;
+            padding: var(--padding-y);
+            padding-top: 0px;
+            padding-right: 15%;
+            font-size: 14px;
+            display: flex;
+            text-align: left;
+        }
+    }
+
+    &[data-open="true"] {
+        background-color: transparent;
+        border: 1px solid var(--colors-primary);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .AccordionItem {
+        --padding-y: 8px;
+        --padding-x: 12px;
+    }
+}
